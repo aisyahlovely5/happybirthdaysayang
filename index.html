@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, Sayang </title>
+  <meta name="description" content="Website ulang tahun yang dibuat dengan sepenuh hati untukmu.">
+  <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+<div id="loading-screen">
+  <div class="loading-stars" id="loading-stars"></div>
+  <div class="loading-content">
+    <div class="loading-ornament"></div>
+    <p class="typewriter-text" id="typewriter-text"></p>
+    <span class="cursor" id="cursor">|</span>
+    <button class="btn-open-gift" id="btn-open-gift">
+      <span></span> Buka Hadiah Ulang Tahun
+    </button>
+  </div>
+</div>
+
+
+<div id="envelope-screen">
+  <div class="envelope-wrapper">
+    <div class="envelope" id="envelope">
+      <div class="env-flap" id="env-flap"></div>
+      <div class="env-body">
+        <div class="env-left"></div>
+        <div class="env-right"></div>
+        <div class="env-bottom"></div>
+        <div class="env-heart">♡</div>
+      </div>
+    </div>
+    <p class="env-hint" id="env-hint">Klik amplop untuk membuka</p>
+  </div>
+</div>
+
+
+<div id="main-content">
+
+  
+  <nav id="main-nav">
+    <div class="nav-brand">♡</div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">☰</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#countdown">Waktu</a></li>
+      <li><a href="#gallery">Galeri</a></li>
+      <li><a href="#love-letter">Surat</a></li>
+      <li><a href="#reasons">98 Alasan</a></li>
+      <li><a href="#timeline">Timeline</a></li>
+      <li><a href="#ldr-map">Peta</a></li>
+      <li><a href="#memory-wall">Kenangan</a></li>
+      <li><a href="#quiz">Kuis</a></li>
+      <li><a href="#wishes">Harapan</a></li>
+      <li><a href="#closing">Penutup</a></li>
+    </ul>
+  </nav>
+
+  <section id="hero">
+    <canvas id="particles-canvas"></canvas>
+    <div class="hero-inner">
+      <div class="hero-photo-wrap">
+        <div class="hero-rings">
+          <div class="ring ring-1"></div>
+          <div class="ring ring-2"></div>
+          <div class="ring ring-3"></div>
+        </div>
+        <img src="https://cdn.phototourl.com/member/2026-05-28-cc7844bc-4ab9-4383-92b3-4d3756cdfe77.jpg" alt="Foto Pacar" class="hero-photo" id="hero-photo"
+          onerror="this.style.display='none'; document.getElementById('hero-photo-placeholder').style.display='flex'">
+        <div class="hero-photo-placeholder" id="hero-photo-placeholder">
+          <span></span>
+          <small>Ganti dengan foto-pacar.jpg</small>
+        </div>
+      </div>
+      <div class="hero-text">
+        <p class="hero-eyebrow"> Hari yang sangat spesial </p>
+        <h1 class="hero-title">Selamat Ulang Tahun<br><em id="hero-name">Sayang</em></h1>
+        <p class="hero-quote">"Jarak mungkin memisahkan kita, tetapi tidak pernah memisahkan rasa yang kita miliki."</p>
+        <div class="hero-actions">
+          <a href="#countdown" class="btn-primary">Mulai Perjalanan Kita</a>
+          <a href="#love-letter" class="btn-ghost">Baca Pesanku</a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-cue">
+      <div class="scroll-dot"></div>
+    </div>
+  </section>
+
+  <section id="countdown" class="section reveal-section">
+    <div class="section-head">
+      <p class="section-eyebrow">Sudah Berapa Lama?</p>
+      <h2 class="section-title">Waktu Kita Bersama</h2>
+    </div>
+    <div class="countdown-grid">
+      <div class="cd-item"><div class="cd-num" id="cd-days">109</div><div class="cd-label">Hari</div></div>
+      <div class="cd-sep">:</div>
+      <div class="cd-item"><div class="cd-num" id="cd-hours">2621</div><div class="cd-label">Jam</div></div>
+      <div class="cd-sep">:</div>
+      <div class="cd-item"><div class="cd-num" id="cd-mins">157266</div><div class="cd-label">Menit</div></div>
+      <div class="cd-sep">:</div>
+      <div class="cd-item"><div class="cd-num" id="cd-secs">9435974</div><div class="cd-label">Detik</div></div>
+    </div>
+    <p class="cd-quote">"Setiap detik yang berlalu membuatku semakin bersyukur memilikimu."</p>
+  </section>
+
+  <section id="gallery" class="section reveal-section">
+    <div class="section-head">
+      <p class="section-eyebrow">Momen Indah</p>
+      <h2 class="section-title">Galeri apa aja</h2>
+    </div>
+    <div class="gallery-grid" id="gallery-grid"></div>
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+      <button class="lb-close" id="lb-close" aria-label="Tutup">✕</button>
+      <button class="lb-prev" id="lb-prev" aria-label="Sebelumnya">‹</button>
+      <button class="lb-next" id="lb-next" aria-label="Berikutnya">›</button>
+      <figure class="lb-figure">
+        <img id="lb-img" src="" alt="" class="lb-img">
+        <figcaption id="lb-caption" class="lb-caption"></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="love-letter" class="section reveal-section">
+    <div class="section-head">
+      <p class="section-eyebrow">Dari Hatiku</p>
+      <h2 class="section-title">Surat Cinta Untukmu</h2>
+    </div>
+    <div class="book-scene">
+      <div class="book" id="book">
+      </div>
+      <div class="book-controls">
+        <button class="book-btn" id="book-prev">‹ Sebelumnya</button>
+        <span class="book-page-indicator" id="book-indicator">1 / 4</span>
+        <button class="book-btn" id="book-next">Berikutnya ›</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="reasons" class="section reveal-section">
+    <div class="section-head">
+      <p class="section-eyebrow">Mengapa Aku Mencintaimu</p>
+      <h2 class="section-title">98 Alasan Aku Mencintaimu</h2>
+      <p class="section-sub">Klik setiap kartu untuk melihat alasannya</p>
+    </div>
+    <div class="reasons-grid" id="reasons-grid"></div>
+  </section>
+
+  <section id="timeline" class="section reveal-section">
+    <div class="section-head">
+      <p class="section-eyebrow">Perjalanan Kita</p>
+      <h2 class="section-title">Timeline Kisah Kita</h2>
+    </div>
+    <div class="timeline-wrap">
+      <div class="timeline-line"></div>
+      <div id="timeline-items"></div>
+    </div>
+  </section>
+
+  <section id="ldr-map" class="section reveal-section">
+    <div class="section-head">
+      <p class="section-eyebrow">Dua Hati, Satu Rasa</p>
+      <h2 class="section-title">Peta Cinta Kita</h2>
+    </div>
+    <div class="map-container">
+      <canvas id="map-canvas"></canvas>
+      <div class="map-info">
+        <div class="map-loc" id="map-loc-me">
+          <div class="loc-pulse"></div>
+          <p class="loc-name" id="loc-name-me">Kotaku</p>
+          <p class="loc-role">Aku di sini</p>
+        </div>
+        <div class="map-dist" id="map-dist">
+          <span id="dist-value">—</span>
+          <small>km memisahkan kita</small>
+        </div>
+        <div class="map-loc" id="map-loc-you">
+          <div class="loc-pulse"></div>
+          <p class="loc-name" id="loc-name-you">Kotamu</p>
+          <p class="loc-role">Kamu di sini</p>
+        </div>
+      </div>
+    </div>
+    <p class="map-quote">"Walaupun terpisah oleh banyak kilometer, hatiku selalu menemukan jalan menuju dirimu."</p>
+  </section>
+
+  <section id="memory-wall" class="section reveal-section">
+    <div class="section-head">
+      <p class="section-eyebrow">Papan Kenangan</p>
+      <h2 class="section-title">Memory Wall</h2>
+    </div>
+    <div class="memory-grid" id="memory-grid"></div>
+    <div id="memory-popup" class="memory-popup" aria-hidden="true">
+      <div class="memory-popup-card">
+        <button class="memory-close" id="memory-close">✕</button>
+        <div class="memory-popup-icon" id="mp-icon"></div>
+        <h3 class="memory-popup-title" id="mp-title"></h3>
+        <p class="memory-popup-text" id="mp-text"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="quiz" class="section reveal-section">
+    <div class="section-head">
+      <p class="section-eyebrow">Seberapa Kenal Kamu?</p>
+      <h2 class="section-title">Love Quiz</h2>
+    </div>
+    <div class="quiz-wrap">
+      <div class="quiz-card" id="quiz-card">
+        <div class="quiz-progress-bar-track">
+          <div class="quiz-progress-bar" id="quiz-bar"></div>
+        </div>
+        <p class="quiz-counter" id="quiz-counter">Pertanyaan 1 dari 10</p>
+        <h3 class="quiz-question" id="quiz-question"></h3>
+        <div class="quiz-options" id="quiz-options"></div>
+      </div>
+      <div class="quiz-result" id="quiz-result">
+        <div class="result-ring">
+          <svg viewBox="0 0 120 120" class="result-svg">
+            <circle cx="60" cy="60" r="50" class="result-track"/>
+            <circle cx="60" cy="60" r="50" class="result-fill" id="result-fill"/>
+          </svg>
+          <div class="result-number">
+            <span id="result-score">0</span>
+            <small>/10</small>
+          </div>
+        </div>
+        <p class="result-msg" id="result-msg"></p>
+        <button class="btn-primary" id="quiz-retry">Coba Lagi ↺</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="surprise-box-section" class="section reveal-section">
+    <div class="section-head">
+      <p class="section-eyebrow">Ada Sesuatu Untukmu</p>
+      <h2 class="section-title">Kotak Kejutan</h2>
+    </div>
+    <div class="surprise-stage">
+      <div class="gift-wrap" id="gift-wrap">
+        <div class="gift-lid" id="gift-lid">
+          <div class="gift-ribbon-top"></div>
+        </div>
+        <div class="gift-box-body">
+          <div class="gift-ribbon-h"></div>
+          <div class="gift-ribbon-v"></div>
+        </div>
+        <div class="gift-sparkles" id="gift-sparkles"></div>
+      </div>
+      <p class="surprise-hint" id="surprise-hint">Klik kotak untuk membuka kejutan!</p>
+      <div class="surprise-cards" id="surprise-cards"></div>
+    </div>
+  </section>
+
+  <section id="secret-section" class="section">
+    <div class="secret-inner">
+      <p class="secret-eyebrow"> Hanya Untukmu </p>
+      <button class="btn-secret" id="btn-secret">Jangan Klik Jika Tidak Siap</button>
+    </div>
+    <div id="secret-popup" class="secret-popup" aria-hidden="true">
+      <div class="secret-card">
+        <button class="secret-close" id="secret-close">✕</button>
+        <div class="secret-heart">♡</div>
+        <p class="secret-text">"Terima kasih karena selalu bertahan bersamaku. Aku tahu hubungan ini tidak selalu mudah, tetapi aku tidak pernah menyesal memilihmu."</p>
+        <p class="secret-text">"Kamu adalah pilihan terbaik yang pernah aku buat, dan aku akan terus memilihmu, setiap hari, sampai kapanpun."</p>
+        <p class="secret-sig">dengan segenap cintaku ♡</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="starry-sky" class="section">
+    <canvas id="stars-canvas"></canvas>
+    <div class="starry-overlay">
+      <p class="section-eyebrow" style="color:var(--gold)">Klik Bintang</p>
+      <h2 class="section-title" style="color:#fff">Langit Cinta Kita</h2>
+      <p class="starry-hint">Klik bintang mana saja untuk mendapatkan pesan cinta dari aku</p>
+    </div>
+    <div id="star-msg" class="star-msg"></div>
+  </section>
+
+  <section id="wishes" class="section reveal-section">
+    <div class="section-head">
+      <p class="section-eyebrow">Harapan & Doa</p>
+      <h2 class="section-title">Wall of Wishes</h2>
+    </div>
+    <div class="wishes-grid" id="wishes-grid"></div>
+  </section>
+
+  <section id="closing">
+    <canvas id="closing-stars"></canvas>
+    <div class="closing-inner">
+      <p class="closing-line" id="cl-1">"Terima kasih telah menjadi bagian terindah dalam hidupku."</p>
+      <p class="closing-line" id="cl-2">"Terima kasih karena tetap bertahan meskipun kita dipisahkan oleh jarak."</p>
+      <p class="closing-line" id="cl-3">Selamat Ulang Tahun, Sayang.</p>
+      <button class="btn-hug" id="btn-hug"> Peluk Virtual</button>
+      <h1 class="closing-final" id="closing-final">Aku Mencintaimu Hari Ini,<br>Besok, dan Selamanya</h1>
+    </div>
+    <canvas id="confetti-canvas"></canvas>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
